@@ -27,20 +27,21 @@ def find_mismatch(text) :
 
 
 def main() :
-    do= input("I" or "F")
-    if "I"  in do :
-        text = input()
-    mismatch = find_mismatch(text)
-    if mismatch == "Success" :
-        print ("Success")
-    elif "F" in do :
-        name = input("Enter file name :")
-    with open(name, "r", encoding = "latin1") as file :
+    do=input( "I" or "F")
+    if "F" in do :
+         name = input("Enter file name :")
+         with open(name, "r", encoding = "latin1") as file :
             text = file.read()
             mismatch = find_mismatch(text)
             if mismatch == "Success" :
                 print ("Success")
-            else : print(mismatch)
+            else : 
+                print(mismatch)
+    elif "I"  in do :
+        text = input()
+    mismatch = find_mismatch(text)
+    if mismatch == "Success" :
+        print ("Success")
 
 if __name__ == "__main__":
     main()

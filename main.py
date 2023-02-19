@@ -36,7 +36,7 @@ def main() :
         print ("Success")
     elif "F" in do :
         name = input("Enter name :")
-    with open(name, "r", encoding = "encond") as file :
+    with open(name, "r", encoding = "latin1") as file :
             text = file.read()
             mismatch = find_mismatch(text)
             if mismatch == "Success" :
